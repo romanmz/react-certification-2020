@@ -135,9 +135,9 @@ For the final deliverable, we will provide some feedback to but there is no extr
 ## Submitting the deliverables
 
 For submitting your work, you should follow these steps:
-# Create a pull request with your code, targeting the master branch of the repository [react-certification-2020](https://github.com/wizelineacademy/react-certification-2020).
-# Deploy your application code to any hosting service (we suggest you use Netlify or any other free hosting provider you want to use like Firebase, etc.).
-# Fill out this form and provide the requested information: https://forms.gle/ePnLR2xNVc3M1HLu8
+1. Create a pull request with your code, targeting the master branch of the repository [react-certification-2020](https://github.com/wizelineacademy/react-certification-2020).
+2. Deploy your application code to any hosting service (we suggest you use Netlify or any other free hosting provider you want to use like Firebase, etc.).
+3. Fill out this form and provide the requested information: https://forms.gle/ePnLR2xNVc3M1HLu8
 
 > **Important:* Don't forget to include any additional information that might be necessary for running your code (e.g. test user credentials, etc).
 
