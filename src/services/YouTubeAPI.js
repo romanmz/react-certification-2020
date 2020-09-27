@@ -45,6 +45,7 @@ async function fetchVideo(url) {
     id: item.id,
     title: item.snippet.title,
     description: item.snippet.description,
+    thumbnail: item.snippet.thumbnails.high.url,
   };
 }
 
