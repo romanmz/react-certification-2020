@@ -2,15 +2,15 @@
 
 ## To Do
 
-- [ ] Check out the [demo application](https://react-certification-2020.netlify.app/) (login: wizeline/Rocks!)
+- [x] Check out the [demo application](https://react-certification-2020.netlify.app/) (login: wizeline/Rocks!)
 
 ### First Deliverable (due September 28th 23:59PM)
 
 #### YouTube API (Home Page / Search)
 
-- [ ] [Create API keys for the YouTube API](https://developers.google.com/youtube/v3/getting-started)
-- [ ] [Read examples about how to consume the API](https://github.com/google/google-api-javascript-client/blob/master/docs/start.md)
-- [ ] Fetch and display results from YouTube API on Home Page
+- [x] [Create API keys for the YouTube API](https://developers.google.com/youtube/v3/getting-started)
+- [x] [Read examples about how to consume the API](https://github.com/google/google-api-javascript-client/blob/master/docs/start.md)
+- [x] Fetch and display results from YouTube API on Home Page
 - [ ] Add search form that updates video feed
 
 #### Mock Authentication
@@ -56,6 +56,7 @@
 
 #### Others
 
+- [ ] Enable dark mode
 - [ ] Persist data with local storage
 - [ ] Enable a 404 page
 
