@@ -20,7 +20,7 @@
 - [x] Handle success and error cases
 - [x] Store the logged-in user in a global accessible Context
 - [x] Define public and private routes
-- [ ] Display content based on the authenticated user
+- [x] Display content based on the authenticated user
 
 #### YouTube API (Video Details)
 
