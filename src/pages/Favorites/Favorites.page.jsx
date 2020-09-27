@@ -13,7 +13,7 @@ const FavoritesPage = () => {
       {favs.length === 0 ? (
         <p>No favorite videos yet</p>
       ) : (
-        favs.map((video) => <VideoItem {...video} />)
+        favs.map((video) => <VideoItem key={video.id} {...video} />)
       )}
     </>
   );
