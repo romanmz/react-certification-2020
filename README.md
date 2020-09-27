@@ -19,7 +19,7 @@
 - [x] Implement the mocked login
 - [x] Handle success and error cases
 - [x] Store the logged-in user in a global accessible Context
-- [ ] Define public and private routes
+- [x] Define public and private routes
 - [ ] Display content based on the authenticated user
 
 #### YouTube API (Video Details)
@@ -29,9 +29,9 @@
 
 #### YouTube API (Favorite Videos)
 
-- [ ] Allow users to mark videos as favorites
-- [ ] Display the favorite videos on a private route
-- [ ] Allow users to see the details of that video
+- [x] Allow users to mark videos as favorites
+- [x] Display the favorite videos on a private route
+- [x] Allow users to see the details of that video
 
 #### Submitting
 

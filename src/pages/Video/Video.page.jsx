@@ -29,7 +29,7 @@ const VideoPage = () => {
 
   // favorites button
   let toggleFavButton = null;
-  if (user) {
+  if (user && video) {
     if (user.favorites.some((favorite) => favorite.id === video.id)) {
       toggleFavButton = (
         <button type="button" onClick={removeFromFavorites}>
