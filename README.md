@@ -15,10 +15,10 @@
 
 #### Mock Authentication
 
-- [ ] Create a login page/form
-- [ ] Implement the mocked login
-- [ ] Handle success and error cases
-- [ ] Store the logged-in user in a global accessible Context
+- [x] Create a login page/form
+- [x] Implement the mocked login
+- [x] Handle success and error cases
+- [x] Store the logged-in user in a global accessible Context
 - [ ] Define public and private routes
 - [ ] Display content based on the authenticated user
 

@@ -6,7 +6,7 @@ import UserContext from '../../state/UserContext';
 const LoginPage = () => {
   // Form state
   const [isLoading, setIsLoading] = useState(false);
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(null);
