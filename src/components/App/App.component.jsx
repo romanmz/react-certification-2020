@@ -7,13 +7,14 @@ import UserContext from '../../state/UserContext';
 // Pages
 import HomePage from '../../pages/Home';
 import VideoPage from '../../pages/Video';
+import LoginPage from '../../pages/Login';
 
 function App() {
   const [user, setUser] = useState(null);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-    <BrowserRouter>
+      <BrowserRouter>
         <header>
           {user ? (
             <>
@@ -30,14 +31,18 @@ function App() {
                   Home
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/login">Login</NavLink>
+              </li>
             </ul>
           </nav>
         </header>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/video/:id" component={VideoPage} />
-      </Switch>
-    </BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/video/:id" component={VideoPage} />
+          <Route path="/login" component={LoginPage} />
+        </Switch>
+      </BrowserRouter>
     </UserContext.Provider>
   );
 }
