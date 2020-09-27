@@ -9,6 +9,7 @@ import UserContext from '../../state/UserContext';
 import HomePage from '../../pages/Home';
 import VideoPage from '../../pages/Video';
 import LoginPage from '../../pages/Login';
+import LogoutPage from '../../pages/Logout';
 import FavoritesPage from '../../pages/Favorites';
 
 function App() {
@@ -39,7 +40,11 @@ function App() {
                 </li>
               )}
               <li>
-                <NavLink to="/login">Login</NavLink>
+                {user ? (
+                  <NavLink to="/logout">Logout</NavLink>
+                ) : (
+                  <NavLink to="/login">Login</NavLink>
+                )}
               </li>
             </ul>
           </nav>
@@ -48,6 +53,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route path="/video/:id" component={VideoPage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/logout" component={LogoutPage} />
           <PrivateRoute path="/favorites" component={FavoritesPage} />
         </Switch>
       </BrowserRouter>
