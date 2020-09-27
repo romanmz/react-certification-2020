@@ -24,8 +24,8 @@
 
 #### YouTube API (Video Details)
 
-- [ ] Display the selected video and its information
-- [ ] Display a list of related videos
+- [x] Display the selected video and its information
+- [x] Display a list of related videos
 
 #### YouTube API (Favorite Videos)
 
