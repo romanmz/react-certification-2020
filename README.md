@@ -46,13 +46,13 @@
 
 #### Technical requirements
 
-- [ ] Functional components
-  - [ ] React hooks
+- [x] Functional components
+  - [x] React hooks
   - [ ] Custom hooks
-- [ ] State management with React Context
+- [x] State management with React Context
 - [ ] Styled components
-- [ ] React router
-  - [ ] Public and private routes
+- [x] React router
+  - [x] Public and private routes
 
 #### Others
 
