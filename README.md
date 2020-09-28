@@ -11,7 +11,7 @@
 - [x] [Create API keys for the YouTube API](https://developers.google.com/youtube/v3/getting-started)
 - [x] [Read examples about how to consume the API](https://github.com/google/google-api-javascript-client/blob/master/docs/start.md)
 - [x] Fetch and display results from YouTube API on Home Page
-- [ ] Add search form that updates video feed
+- [x] Add search form that updates video feed
 
 #### Mock Authentication
 
