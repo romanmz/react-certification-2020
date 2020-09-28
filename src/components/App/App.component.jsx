@@ -8,6 +8,7 @@ import SearchContext from '../../state/SearchContext';
 
 // Components
 import SearchForm from '../SearchForm';
+import UserInfo from '../UserInfo';
 
 // Pages
 import HomePage from '../../pages/Home';
@@ -25,14 +26,7 @@ function App() {
       <SearchContext.Provider value={{ keyword, setKeyword }}>
         <BrowserRouter>
           <header>
-            {user ? (
-              <>
-                <h3>Welcome {user.name}</h3>
-                <img src={user.avatarUrl} alt="user avatar" />
-              </>
-            ) : (
-              ''
-            )}
+            <UserInfo />
             <nav>
               <ul>
                 <li>
