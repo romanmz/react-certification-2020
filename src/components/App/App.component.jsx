@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PrivateRoute from '../PrivateRoute';
 
 // Contexts
@@ -7,9 +7,7 @@ import UserContext from '../../state/UserContext';
 import SearchContext from '../../state/SearchContext';
 
 // Components
-import SearchForm from '../SearchForm';
-import UserInfo from '../UserInfo';
-import SiteNav from '../SiteNav';
+import SiteHeader from '../SiteHeader';
 
 // Pages
 import HomePage from '../../pages/Home';
@@ -26,11 +24,7 @@ function App() {
     <UserContext.Provider value={{ user, setUser }}>
       <SearchContext.Provider value={{ keyword, setKeyword }}>
         <BrowserRouter>
-          <header>
-            <UserInfo />
-            <SiteNav />
-            <SearchForm />
-          </header>
+            <SiteHeader />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/search/:keyword" component={HomePage} />
