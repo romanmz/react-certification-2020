@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     line-height: 1.8;
     font-family: Helvetica, Arial, sans-serif;
-    color: ${({ theme }) => theme.color.text}
+    color: ${({ theme }) => theme.color.text};
     background-color: ${({ theme }) => theme.color.background};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
