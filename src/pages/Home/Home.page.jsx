@@ -1,13 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import { getSearchResults } from '../../services/YouTubeAPI';
 import VideoItem from '../../components/VideoItem';
+import SearchContext from '../../state/SearchContext';
 
 function HomePage() {
+  // Get params
+  const params = useParams();
+  const { keyword, setKeyword } = useContext(SearchContext);
+
+  // Update keyword based on URL
+  useEffect(() => {
+    const newKeyword = params.keyword ?? 'wizeline';
+    if (newKeyword !== keyword) {
+      setKeyword(newKeyword);
+    }
+  }, [params.keyword, keyword, setKeyword]);
+
   // Get list of videos
   const [videos, setVideos] = useState([]);
   useEffect(() => {
-    getSearchResults('wizeline').then(setVideos).catch(console.log);
-  }, []);
+    getSearchResults(keyword).then(setVideos).catch(console.log);
+  }, [keyword]);
 
   // Render
   return (
