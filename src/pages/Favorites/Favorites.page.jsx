@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import UserContext from '../../state/UserContext';
-import VideoItem from '../../components/VideoItem';
+import VideoGrid from '../../components/VideoGrid';
 
 const FavoritesPage = () => {
   const { user } = useContext(UserContext);
@@ -10,11 +10,7 @@ const FavoritesPage = () => {
   return (
     <>
       <h1>Favorites</h1>
-      {favs.length === 0 ? (
-        <p>No favorite videos yet</p>
-      ) : (
-        favs.map((video) => <VideoItem key={video.id} {...video} />)
-      )}
+      {favs.length === 0 ? <p>No favorite videos yet</p> : <VideoGrid videos={favs} />}
     </>
   );
 };

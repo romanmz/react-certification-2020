@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getVideo, getRelatedVideos } from '../../services/YouTubeAPI';
-import VideoItem from '../../components/VideoItem';
+import VideoGrid from '../../components/VideoGrid';
 import UserContext from '../../state/UserContext';
 
 const VideoPage = () => {
@@ -71,13 +71,7 @@ const VideoPage = () => {
       </article>
       <aside>
         <h3>Related Videos</h3>
-        <ul>
-          {relatedVideos.map((item) => (
-            <li key={item.id}>
-              <VideoItem {...item} />
-            </li>
-          ))}
-        </ul>
+        <VideoGrid videos={relatedVideos} />
       </aside>
     </>
   );

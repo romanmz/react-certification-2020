@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSearchResults } from '../../services/YouTubeAPI';
-import VideoItem from '../../components/VideoItem';
+import VideoGrid from '../../components/VideoGrid';
 import SearchContext from '../../state/SearchContext';
 
 function HomePage() {
@@ -26,9 +26,7 @@ function HomePage() {
   // Render
   return (
     <section>
-      {videos.map((video) => {
-        return <VideoItem key={video.id} {...video} />;
-      })}
+      <VideoGrid videos={videos} />
     </section>
   );
 }
