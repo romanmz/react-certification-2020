@@ -9,6 +9,7 @@ import SearchContext from '../../state/SearchContext';
 // Components
 import SearchForm from '../SearchForm';
 import UserInfo from '../UserInfo';
+import SiteNav from '../SiteNav';
 
 // Pages
 import HomePage from '../../pages/Home';
@@ -27,27 +28,7 @@ function App() {
         <BrowserRouter>
           <header>
             <UserInfo />
-            <nav>
-              <ul>
-                <li>
-                  <NavLink exact to="/">
-                    Home
-                  </NavLink>
-                </li>
-                {user && (
-                  <li>
-                    <NavLink to="/favorites">Favorites</NavLink>
-                  </li>
-                )}
-                <li>
-                  {user ? (
-                    <NavLink to="/logout">Logout</NavLink>
-                  ) : (
-                    <NavLink to="/login">Login</NavLink>
-                  )}
-                </li>
-              </ul>
-            </nav>
+            <SiteNav />
             <SearchForm />
           </header>
           <Switch>
