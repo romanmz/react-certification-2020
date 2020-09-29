@@ -35,10 +35,10 @@
 
 #### Submitting
 
-- [ ] Create a pull request
-- [ ] Deploy to a hosting service
-- [ ] Add instructions for running the app, testing login, etc…
-- [ ] Fill out this form: https://forms.gle/ePnLR2xNVc3M1HLu8
+- [x] Create a pull request
+- [x] Deploy to a hosting service
+- [x] Add instructions for running the app, testing login, etc…
+- [x] Fill out this form: https://forms.gle/ePnLR2xNVc3M1HLu8
 
 ### Final Deliverable (due October 5th 23:59PM)
 
