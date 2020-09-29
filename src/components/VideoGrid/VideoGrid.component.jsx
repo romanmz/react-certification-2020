@@ -18,8 +18,8 @@ const VideoGrid = ({ videos }) => {
   return (
     <VideoGridContainer>
       {videos.map((video) => (
-        <li>
-          <VideoItem {...video} key={video.id} />
+        <li key={video.id}>
+          <VideoItem {...video} />
         </li>
       ))}
     </VideoGridContainer>
