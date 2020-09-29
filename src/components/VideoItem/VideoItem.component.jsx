@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const VideoItemContainer = styled.div`
   a {
     display: flex;
+    align-items: flex-start;
     margin: 2rem;
     background: white;
     border-radius: 5px;
@@ -20,6 +21,8 @@ const VideoItemContainer = styled.div`
   }
   img {
     flex: 0 0 50%;
+    min-width: 0;
+    height: auto;
   }
   div {
     flex: auto;

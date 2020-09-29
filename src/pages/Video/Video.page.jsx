@@ -1,8 +1,28 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 import { getVideo, getRelatedVideos } from '../../services/YouTubeAPI';
 import VideoGrid from '../../components/VideoGrid';
 import UserContext from '../../state/UserContext';
+
+const VideoPageContainer = styled.section`
+  display: block;
+  margin: -4rem 0 0;
+
+  article {
+    padding: 0 4rem;
+
+    .videoPlayer {
+      margin: 0 -4rem 2rem;
+    }
+    iframe {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 50rem;
+    }
+  }
+`;
 
 const VideoPage = () => {
   const { id } = useParams();
@@ -62,7 +82,7 @@ const VideoPage = () => {
 
   // Render
   return (
-    <>
+    <VideoPageContainer>
       <article>
         <div className="videoPlayer">{videoPlayer}</div>
         <h1>{video ? video.title : ''}</h1>
@@ -73,7 +93,7 @@ const VideoPage = () => {
         <h3>Related Videos</h3>
         <VideoGrid videos={relatedVideos} />
       </aside>
-    </>
+    </VideoPageContainer>
   );
 };
 
