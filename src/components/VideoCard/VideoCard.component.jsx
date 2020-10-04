@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const VideoItemContainer = styled.div`
+const VideoCardContainer = styled.div`
   a {
     display: flex;
     align-items: flex-start;
@@ -30,9 +30,9 @@ const VideoItemContainer = styled.div`
   }
 `;
 
-const VideoItem = ({ id, title, description, thumbnail }) => {
+const VideoCard = ({ id, title, description, thumbnail }) => {
   return (
-    <VideoItemContainer>
+    <VideoCardContainer>
       <Link to={`/video/${id}`}>
         <img src={thumbnail} height="360" width="480" alt={title} />
         <div>
@@ -40,8 +40,8 @@ const VideoItem = ({ id, title, description, thumbnail }) => {
           <p>{description}</p>
         </div>
       </Link>
-    </VideoItemContainer>
+    </VideoCardContainer>
   );
 };
 
-export default VideoItem;
+export default VideoCard;

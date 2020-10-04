@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import VideoItem from '../VideoItem';
+import VideoCard from '../VideoCard';
 
 const VideoGridContainer = styled.ul`
   margin: 0;
@@ -19,7 +19,7 @@ const VideoGrid = ({ videos }) => {
     <VideoGridContainer>
       {videos.map((video) => (
         <li key={video.id}>
-          <VideoItem {...video} />
+          <VideoCard {...video} />
         </li>
       ))}
     </VideoGridContainer>
