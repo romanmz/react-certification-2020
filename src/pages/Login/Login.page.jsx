@@ -40,6 +40,7 @@ const LoginPage = () => {
             type="text"
             id="username"
             value={username}
+            data-testid="username-field"
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
@@ -51,6 +52,7 @@ const LoginPage = () => {
             type="password"
             id="password"
             value={password}
+            data-testid="password-field"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>

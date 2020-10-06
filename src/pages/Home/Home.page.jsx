@@ -25,9 +25,12 @@ function HomePage() {
 
   // Render
   return (
-    <section>
+    <article>
+      <h1>
+        Search results for <em>“{keyword}”</em>
+      </h1>
       <VideoGrid videos={videos} />
-    </section>
+    </article>
   );
 }
 
