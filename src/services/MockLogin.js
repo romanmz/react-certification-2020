@@ -1,6 +1,6 @@
 import { mockUsername, mockPassword } from '../secret/mock.login';
 
-const mockedUser = {
+export const mockUser = {
   id: '123',
   name: 'Wizeline',
   avatarUrl:
@@ -12,7 +12,7 @@ export default async function loginApi(username, password) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (username === mockUsername && password === mockPassword) {
-        return resolve(mockedUser);
+        return resolve(mockUser);
       }
       return reject(new Error('Username or password invalid'));
     }, 500);

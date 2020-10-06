@@ -4,8 +4,8 @@ import apiKey from '../secret/youtube.api';
 const baseUrl = new URL('https://www.googleapis.com/youtube/v3/');
 
 // Mock Data
-const useMockData = true && process.env.NODE_ENV === 'development';
-const mockResults = [
+const useMockData = process.env.NODE_ENV === 'development';
+export const mockSearchResults = [
   {
     description:
       'Follow Hector Padilla, Wizeline Director of Engineering, for a lively tour of our office. In 2018, Wizeline opened its stunning new office in Guadalajara, Jalisco, ...',
@@ -69,7 +69,7 @@ async function fetchData(url) {
 }
 async function fetchSearchResults(url) {
   if (useMockData) {
-    return mockResults;
+    return mockSearchResults;
   }
   const data = await fetchData(url);
   return data.items.map((item) => {
@@ -83,7 +83,7 @@ async function fetchSearchResults(url) {
 }
 async function fetchVideo(url) {
   if (useMockData) {
-    return mockResults[0];
+    return mockSearchResults[0];
   }
   const data = await fetchData(url);
   const item = data.items[0];

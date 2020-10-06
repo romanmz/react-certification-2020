@@ -10,52 +10,10 @@ import SiteNav from '../components/SiteNav';
 import UserInfo from '../components/UserInfo';
 import VideoCard from '../components/VideoCard';
 import VideoGrid from '../components/VideoGrid';
+import { mockSearchResults } from '../services/YouTubeAPI';
+import { mockUser } from '../services/MockLogin';
 
 // Mock data
-const mockUser = {
-  id: '123',
-  name: 'Wizeline',
-  avatarUrl:
-    'https://media.glassdoor.com/sqll/868055/wizeline-squarelogo-1473976610815.png',
-  favorites: [],
-};
-const mockResults = [
-  {
-    description:
-      'Follow Hector Padilla, Wizeline Director of Engineering, for a lively tour of our office. In 2018, Wizeline opened its stunning new office in Guadalajara, Jalisco, ...',
-    id: 'nmXMgqjQzls',
-    thumbnail: 'https://i.ytimg.com/vi/nmXMgqjQzls/hqdefault.jpg',
-    title: 'Video Tour | Welcome to Wizeline Guadalajara',
-  },
-  {
-    description:
-      'Wizeline continues to offer a Silicon Valley culture in burgeoning innovation hubs like Mexico and Vietnam. In 2018, our Guadalajara team moved into a ...',
-    id: 'HYyRZiwBWc8',
-    thumbnail: 'https://i.ytimg.com/vi/HYyRZiwBWc8/hqdefault.jpg',
-    title: 'Wizeline Guadalajara | Bringing Silicon Valley to Mexico',
-  },
-  {
-    description:
-      'En el 2014, Bismarck fundó Wizeline, compañía tecnológica que trabaja con los corporativos ofreciendo una plataforma para que desarrollen software de forma ...',
-    id: 'Po3VwR_NNGk',
-    thumbnail: 'https://i.ytimg.com/vi/Po3VwR_NNGk/hqdefault.jpg',
-    title: 'Wizeline hace sentir a empleados como en casa',
-  },
-  {
-    description:
-      'El plan de Wizeline, una empresa de inteligencia artificial, para ayudar a crecer la comunidad de ciencia de datos en CDMX y todo el país, a través de cursos ...',
-    id: 'CHzlSGRvWPs',
-    thumbnail: 'https://i.ytimg.com/vi/CHzlSGRvWPs/hqdefault.jpg',
-    title: 'Wizeline',
-  },
-  {
-    description:
-      "Fernando Espinoza shares his experience working as an engineering manager at Wizeline and mentoring other engineers. Learn about Fernando's passions ...",
-    id: 'cjO2fJy8asM',
-    thumbnail: 'https://i.ytimg.com/vi/cjO2fJy8asM/hqdefault.jpg',
-    title: 'A Day in the Life of an Engineering Manager at Wizeline',
-  },
-];
 const lightTheme = {
   color: {
     text: '#333',
@@ -170,7 +128,7 @@ describe('<VideoCard /> component', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoCard {...mockResults[0]} />
+          <VideoCard {...mockSearchResults[0]} />
         </BrowserRouter>
       </ThemeProvider>
     );
@@ -181,7 +139,7 @@ describe('<VideoCard /> component', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoCard {...mockResults[0]} />
+          <VideoCard {...mockSearchResults[0]} />
         </BrowserRouter>
       </ThemeProvider>
     );
@@ -192,22 +150,22 @@ describe('<VideoCard /> component', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoCard {...mockResults[0]} />
+          <VideoCard {...mockSearchResults[0]} />
         </BrowserRouter>
       </ThemeProvider>
     );
     const heading = screen.getByRole('heading', { level: 3 });
-    expect(heading.innerHTML).toBe(mockResults[0].title);
+    expect(heading.innerHTML).toBe(mockSearchResults[0].title);
   });
   it('renders a <p> tag with the video description', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoCard {...mockResults[0]} />
+          <VideoCard {...mockSearchResults[0]} />
         </BrowserRouter>
       </ThemeProvider>
     );
-    const p = screen.getByText(mockResults[0].description);
+    const p = screen.getByText(mockSearchResults[0].description);
     expect(p).toBeTruthy();
   });
 });
@@ -217,7 +175,7 @@ describe('<VideoGrid /> component', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoGrid videos={mockResults} />
+          <VideoGrid videos={mockSearchResults} />
         </BrowserRouter>
       </ThemeProvider>
     );
@@ -228,11 +186,11 @@ describe('<VideoGrid /> component', () => {
     render(
       <ThemeProvider theme={lightTheme}>
         <BrowserRouter>
-          <VideoGrid videos={mockResults} />
+          <VideoGrid videos={mockSearchResults} />
         </BrowserRouter>
       </ThemeProvider>
     );
     const listitems = screen.getAllByRole('listitem');
-    expect(listitems.length).toBe(mockResults.length);
+    expect(listitems.length).toBe(mockSearchResults.length);
   });
 });
