@@ -53,7 +53,7 @@ const SearchForm = () => {
 
   // Render
   return (
-    <SearchFormContainer onSubmit={onFormSubmit}>
+    <SearchFormContainer onSubmit={onFormSubmit} role="search">
       <label htmlFor="keyword">
         <input
           type="search"

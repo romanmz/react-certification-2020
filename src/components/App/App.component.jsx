@@ -36,17 +36,19 @@ function App() {
     <UserContext.Provider value={{ user, setUser }}>
       <SearchContext.Provider value={{ keyword, setKeyword }}>
         <ThemeProvider theme={lightTheme}>
+          <GlobalStyles />
           <BrowserRouter>
-            <GlobalStyles />
             <SiteHeader />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/search/:keyword" component={HomePage} />
-              <Route path="/video/:id" component={VideoPage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/logout" component={LogoutPage} />
-              <PrivateRoute path="/favorites" component={FavoritesPage} />
-            </Switch>
+            <main>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/search/:keyword" component={HomePage} />
+                <Route path="/video/:id" component={VideoPage} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/logout" component={LogoutPage} />
+                <PrivateRoute path="/favorites" component={FavoritesPage} />
+              </Switch>
+            </main>
           </BrowserRouter>
         </ThemeProvider>
       </SearchContext.Provider>
